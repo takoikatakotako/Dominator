@@ -38,3 +38,16 @@ docker build -t kabigon/dominator:latest .
 ```
 docker push kabigon/dominator:latest
 ```
+
+
+
+### Trouble
+
+```
+docker: Error response from daemon: OCI runtime create failed: container_linux.go:367: starting container process caused: exec: "decompress": executable file not found in $PATH: unknown.
+```
+
+```
+docker run --rm -v $PWD:/output -it kabigon/dominator:latest /bin/sh    
+java -jar dominator-1.0.0.jar decompress sample.zlib sample.json
+```

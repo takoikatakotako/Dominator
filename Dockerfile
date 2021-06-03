@@ -5,4 +5,4 @@ COPY . .
 RUN ./gradlew build
 WORKDIR build/libs
 
-ENTRYPOINT ["java", "-jar", "dominator-1.0.0.jar"]
+CMD ["java", "-jar", "dominator-1.0.0.jar"]
